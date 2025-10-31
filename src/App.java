@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         View view = new View();
-        int[] numeros = new int[]{1,2,3,9};
+        int[] numeros = new int[]{19, 24, -19, -28, 5, 30, -12, 34, -9, 52, 0, 45};
         MetodoBurbuja burbuja = new MetodoBurbuja();
         MetodoBurbujaMejorado burbujaMejorado = new MetodoBurbujaMejorado();
         MetodoSeleccion seleccion = new MetodoSeleccion();
@@ -9,6 +9,10 @@ public class App {
         while(true){
             view.showMenu();
             int option = view.intputOption(5);
+            if (option == 5) {
+                System.out.println("Saliendo...");
+                break;
+            }
             view.showOrder();
             int orden = view.intputOption(2);
             boolean ordenOpt = orden == 1;
